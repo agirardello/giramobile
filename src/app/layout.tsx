@@ -1,6 +1,5 @@
 import type { Metadata } from "next";
 import "./globals.css";
-import Nav from "@/components/Nav";
 import Footer from "@/components/Footer";
 
 export const metadata: Metadata = {
@@ -24,8 +23,7 @@ export default function RootLayout({
         <link rel="preconnect" href="https://fonts.googleapis.com" />
         <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="anonymous" />
       </head>
-      <body className="min-h-screen flex flex-col">
-        <Nav />
+      <body className="min-h-screen flex flex-col bg-[#F2F4F8]">
         <main className="flex-1">{children}</main>
         <Footer />
       </body>

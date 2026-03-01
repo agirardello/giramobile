@@ -8,11 +8,12 @@ export const metadata: Metadata = {
 
 export default function TermsPage() {
   return (
-    <div className="max-w-3xl mx-auto px-6 py-16">
+    <div className="max-w-3xl mx-auto px-4 py-12">
+      <div className="bg-white rounded-4xl shadow-card px-8 py-10 sm:px-12">
       <div className="mb-10">
         <Link
           href="/"
-          className="text-sm text-brand-600 hover:text-brand-700 transition-colors mb-6 inline-block"
+          className="text-sm text-[#1565C0] hover:text-[#0D47A1] transition-colors mb-6 inline-block"
         >
           ← Back to home
         </Link>
@@ -125,7 +126,7 @@ export default function TermsPage() {
             Your use of the Software is also governed by our{" "}
             <Link
               href="/privacy"
-              className="text-brand-600 hover:text-brand-700 underline underline-offset-2"
+              className="text-[#1565C0] hover:text-[#0D47A1] underline underline-offset-2"
             >
               Privacy Policy
             </Link>
@@ -225,13 +226,14 @@ export default function TermsPage() {
             If you have questions about these Terms, please contact us at{" "}
             <a
               href="mailto:info@gira.me"
-              className="text-brand-600 hover:text-brand-700 underline underline-offset-2"
+              className="text-[#1565C0] hover:text-[#0D47A1] underline underline-offset-2"
             >
               info@gira.me
             </a>
             .
           </p>
         </section>
+      </div>
       </div>
     </div>
   );

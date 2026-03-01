@@ -8,11 +8,12 @@ export const metadata: Metadata = {
 
 export default function PrivacyPage() {
   return (
-    <div className="max-w-3xl mx-auto px-6 py-16">
+    <div className="max-w-3xl mx-auto px-4 py-12">
+      <div className="bg-white rounded-4xl shadow-card px-8 py-10 sm:px-12">
       <div className="mb-10">
         <Link
           href="/"
-          className="text-sm text-brand-600 hover:text-brand-700 transition-colors mb-6 inline-block"
+          className="text-sm text-[#1565C0] hover:text-[#0D47A1] transition-colors mb-6 inline-block"
         >
           ← Back to home
         </Link>
@@ -117,7 +118,7 @@ export default function PrivacyPage() {
                 href="https://firebase.google.com/support/privacy"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="text-brand-600 hover:text-brand-700 underline underline-offset-2"
+                className="text-[#1565C0] hover:text-[#0D47A1] underline underline-offset-2"
               >
                 Firebase Privacy Policy
               </a>
@@ -131,7 +132,7 @@ export default function PrivacyPage() {
                 href="https://policies.google.com/privacy"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="text-brand-600 hover:text-brand-700 underline underline-offset-2"
+                className="text-[#1565C0] hover:text-[#0D47A1] underline underline-offset-2"
               >
                 Google Privacy Policy
               </a>
@@ -223,12 +224,13 @@ export default function PrivacyPage() {
           <p className="mt-3">
             <a
               href="mailto:info@gira.me"
-              className="text-brand-600 hover:text-brand-700 underline underline-offset-2"
+              className="text-[#1565C0] hover:text-[#0D47A1] underline underline-offset-2"
             >
               info@gira.me
             </a>
           </p>
         </section>
+      </div>
       </div>
     </div>
   );
