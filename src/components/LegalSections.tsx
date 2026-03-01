@@ -10,6 +10,12 @@ function read(): Section {
   return null;
 }
 
+function goHome() {
+  history.replaceState(null, "", "/");
+  window.dispatchEvent(new Event("hashchange"));
+  window.scrollTo({ top: 0, behavior: "smooth" });
+}
+
 export default function LegalSections() {
   const [active, setActive] = useState<Section>(null);
 
@@ -34,16 +40,24 @@ export default function LegalSections() {
       className="border-t border-[#D2D2D7] px-6 py-20"
     >
       <div className="max-w-2xl mx-auto">
-        {active === "terms" ? <Terms /> : <Privacy />}
+        {active === "terms" ? <Terms onClose={goHome} /> : <Privacy onClose={goHome} />}
       </div>
     </section>
   );
 }
 
-function Terms() {
+function Terms({ onClose }: { onClose: () => void }) {
   return (
     <>
-      <h2 className="text-3xl font-bold text-[#1D1D1F] mb-1">Terms of Service</h2>
+      <div className="flex items-start justify-between gap-4 mb-1">
+        <h2 className="text-3xl font-bold text-[#1D1D1F]">Terms of Service</h2>
+        <button
+          onClick={onClose}
+          className="mt-1.5 text-sm text-[#0071E3] hover:underline shrink-0"
+        >
+          ← Home
+        </button>
+      </div>
       <p className="text-sm text-[#86868B] mb-12">Last updated: March 1, 2026</p>
 
       <div className="space-y-8 text-[#3A3A3C] leading-relaxed text-[15px]">
@@ -134,10 +148,18 @@ function Terms() {
   );
 }
 
-function Privacy() {
+function Privacy({ onClose }: { onClose: () => void }) {
   return (
     <>
-      <h2 className="text-3xl font-bold text-[#1D1D1F] mb-1">Privacy Policy</h2>
+      <div className="flex items-start justify-between gap-4 mb-1">
+        <h2 className="text-3xl font-bold text-[#1D1D1F]">Privacy Policy</h2>
+        <button
+          onClick={onClose}
+          className="mt-1.5 text-sm text-[#0071E3] hover:underline shrink-0"
+        >
+          ← Home
+        </button>
+      </div>
       <p className="text-sm text-[#86868B] mb-12">Last updated: March 1, 2026</p>
 
       <div className="space-y-8 text-[#3A3A3C] leading-relaxed text-[15px]">
