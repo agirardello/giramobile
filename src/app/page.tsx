@@ -24,9 +24,14 @@ export default function Home() {
         <h1 className="text-6xl sm:text-7xl font-bold tracking-tight text-[#1D1D1F] leading-none">
           Sudoku
         </h1>
-        <p className="mt-3 text-base font-medium text-[#86868B] tracking-wide uppercase">
+        <a
+          href="https://play.google.com/store/apps/developer?id=Gira+Mobile"
+          target="_blank"
+          rel="noopener noreferrer"
+          className="mt-3 text-base font-medium text-[#86868B] tracking-wide uppercase hover:text-[#1D1D1F] transition-colors"
+        >
           by Gira Mobile
-        </p>
+        </a>
         <p className="mt-6 text-xl text-[#6E6E73] max-w-xs sm:max-w-sm leading-relaxed">
           The classic number puzzle — clean, focused, and distraction&#8209;free.
         </p>
