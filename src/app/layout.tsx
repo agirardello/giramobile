@@ -10,15 +10,7 @@ export const metadata: Metadata = {
   },
   description: "Minimalistic and functional apps that everyone can use.",
   metadataBase: new URL("https://gira.me"),
-  openGraph: {
-    siteName: "Gira Mobile",
-    type: "website",
-    locale: "en_US",
-  },
-  robots: {
-    index: true,
-    follow: true,
-  },
+  icons: { icon: "/favicon.svg" },
 };
 
 export default function RootLayout({
