@@ -1,13 +1,26 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32">
-  <rect width="32" height="32" rx="6" fill="#2563eb"/>
-  <!-- 3x3 Sudoku grid cells -->
-  <rect x="3" y="3" width="7" height="7" rx="1" fill="white" fill-opacity="0.95"/>
-  <rect x="12.5" y="3" width="7" height="7" rx="1" fill="white" fill-opacity="0.5"/>
-  <rect x="22" y="3" width="7" height="7" rx="1" fill="white" fill-opacity="0.95"/>
-  <rect x="3" y="12.5" width="7" height="7" rx="1" fill="white" fill-opacity="0.5"/>
-  <rect x="12.5" y="12.5" width="7" height="7" rx="1" fill="white" fill-opacity="0.95"/>
-  <rect x="22" y="12.5" width="7" height="7" rx="1" fill="white" fill-opacity="0.5"/>
-  <rect x="3" y="22" width="7" height="7" rx="1" fill="white" fill-opacity="0.95"/>
-  <rect x="12.5" y="22" width="7" height="7" rx="1" fill="white" fill-opacity="0.5"/>
-  <rect x="22" y="22" width="7" height="7" rx="1" fill="white" fill-opacity="0.95"/>
+  <rect width="32" height="32" rx="7" fill="#1D1D1F"/>
+
+  <!--
+    G: large CCW arc from (16,9) → through left side → to (19,16).
+    Bar then goes LEFT and stops exactly at M's left vertical (16,16).
+    The arc and bar share the point (16,9) with M's top-left corner,
+    and the bar end (16,16) is a T-junction with M's left vertical.
+  -->
+  <path
+    d="M 16 9 A 8 8 0 1 0 19 16 L 16 16"
+    fill="none" stroke="white" stroke-width="2.5"
+    stroke-linecap="round" stroke-linejoin="round"
+  />
+
+  <!--
+    M: left vertical at x=16 runs from (16,23) up to (16,9) — the exact
+    start of the G arc — tying the two letters into one mark.
+    V-peak at (22,16), right vertical x=28.
+  -->
+  <path
+    d="M 16 23 L 16 9 L 22 16 L 28 9 L 28 23"
+    fill="none" stroke="white" stroke-width="2.5"
+    stroke-linecap="round" stroke-linejoin="round"
+  />
 </svg>
