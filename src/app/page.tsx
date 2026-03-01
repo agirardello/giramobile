@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import Image from "next/image";
 import LegalSections from "@/components/LegalSections";
+import FooterHomeButton from "@/components/FooterHomeButton";
 
 export const metadata: Metadata = {
   title: "Gira Mobile",
@@ -29,16 +30,21 @@ export default function Home() {
         <p className="mt-6 text-xl text-[#6E6E73] max-w-xs sm:max-w-sm leading-relaxed">
           The classic number puzzle — clean, focused, and distraction&#8209;free.
         </p>
+        {/* Official Google Play badge per badge guidelines */}
         <a
           href="https://play.google.com/store/apps/details?id=me.gira.sudoku"
           target="_blank"
           rel="noopener noreferrer"
-          className="mt-10 inline-flex items-center gap-2.5 bg-[#1D1D1F] hover:bg-[#3a3a3c] text-white text-sm font-semibold px-6 py-3.5 rounded-full transition-colors"
+          className="mt-10"
+          aria-label="Get it on Google Play"
         >
-          <svg width="17" height="17" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
-            <path d="M3.18 23.76a2 2 0 0 0 2.12-.22l12.09-6.88-2.93-2.93-11.28 10.03ZM.5 1.4A2 2 0 0 0 0 2.67v18.67a2 2 0 0 0 .5 1.26L.62 22.7l10.45-10.45v-.25L.62 1.56.5 1.4ZM20.37 10.43 17.4 8.76l-3.18 3.18 3.18 3.18 2.98-1.69a2 2 0 0 0 0-3l-.01.01ZM3.18.24 14.34 7.26 11.4 10.2.62 1.33A2 2 0 0 0 3.18.24Z" />
-          </svg>
-          Get it on Google Play
+          <Image
+            src="/google-play-badge.png"
+            alt="Get it on Google Play"
+            width={200}
+            height={77}
+            priority
+          />
         </a>
       </section>
 
@@ -50,6 +56,7 @@ export default function Home() {
         <div className="max-w-2xl mx-auto flex flex-col sm:flex-row items-center justify-between gap-4">
           <p className="text-sm text-[#86868B]">&copy; {new Date().getFullYear()} Gira Mobile</p>
           <div className="flex gap-6 text-sm text-[#86868B]">
+            <FooterHomeButton />
             <a href="#terms" className="hover:text-[#1D1D1F] transition-colors">Terms</a>
             <a href="#privacy" className="hover:text-[#1D1D1F] transition-colors">Privacy</a>
           </div>
