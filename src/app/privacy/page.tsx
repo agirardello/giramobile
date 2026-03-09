@@ -1,9 +1,11 @@
 import Link from "next/link";
+import FooterHomeButton from "@/components/FooterHomeButton";
 
 export default function PrivacyPage() {
   return (
-    <main className="border-t border-[#D2D2D7] px-6 py-20">
-      <div className="max-w-2xl mx-auto">
+    <>
+      <main className="border-t border-[#D2D2D7] px-6 py-20">
+        <div className="max-w-2xl mx-auto">
         <div className="flex items-start justify-between gap-4 mb-1">
           <h2 className="text-3xl font-bold text-[#1D1D1F]">Privacy Policy</h2>
           <Link href="/" className="mt-1.5 text-sm text-[#0071E3] hover:underline shrink-0">
@@ -123,8 +125,20 @@ export default function PrivacyPage() {
               </a>
             </p>
           </div>
+          </div>
         </div>
-      </div>
-    </main>
+      </main>
+
+      <footer className="border-t border-[#D2D2D7] px-6 py-10">
+        <div className="max-w-2xl mx-auto flex flex-col sm:flex-row items-center justify-between gap-4">
+          <p className="text-sm text-[#86868B]">&copy; {new Date().getFullYear()} Gira Mobile</p>
+          <div className="flex gap-6 text-sm text-[#86868B]">
+            <FooterHomeButton />
+            <a href="/terms" className="hover:text-[#1D1D1F] transition-colors">Terms</a>
+            <a href="/privacy" className="hover:text-[#1D1D1F] transition-colors">Privacy</a>
+          </div>
+        </div>
+      </footer>
+    </>
   );
 }
