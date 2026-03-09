@@ -7,9 +7,6 @@ export const metadata: Metadata = {
   title: "Gira Mobile",
   description: "Minimalistic and functional apps that everyone can use.",
   metadataBase: new URL("https://gira.me"),
-  alternates: {
-    canonical: "/",
-  },
   icons: { icon: "/favicon.svg" },
 };
 
