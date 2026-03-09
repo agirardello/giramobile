@@ -1,6 +1,5 @@
 import type { Metadata } from "next";
 import Image from "next/image";
-import LegalSections from "@/components/LegalSections";
 import FooterHomeButton from "@/components/FooterHomeButton";
 
 export const metadata: Metadata = {
@@ -53,17 +52,14 @@ export default function Home() {
         </a>
       </section>
 
-      {/* ── Legal (shown only when #terms or #privacy is in the URL) ── */}
-      <LegalSections />
-
       {/* ── Footer ── */}
       <footer className="border-t border-[#D2D2D7] px-6 py-10">
         <div className="max-w-2xl mx-auto flex flex-col sm:flex-row items-center justify-between gap-4">
           <p className="text-sm text-[#86868B]">&copy; {new Date().getFullYear()} Gira Mobile</p>
           <div className="flex gap-6 text-sm text-[#86868B]">
             <FooterHomeButton />
-            <a href="#terms" className="hover:text-[#1D1D1F] transition-colors">Terms</a>
-            <a href="#privacy" className="hover:text-[#1D1D1F] transition-colors">Privacy</a>
+            <a href="/terms" className="hover:text-[#1D1D1F] transition-colors">Terms</a>
+            <a href="/privacy" className="hover:text-[#1D1D1F] transition-colors">Privacy</a>
           </div>
         </div>
       </footer>
